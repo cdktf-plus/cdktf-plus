@@ -34,7 +34,7 @@ jobs:
           path: dist
 
   release_npm:
-    name: Release to Github Packages NPM regitry
+    name: Release to NPM registry
     needs: build_artifact
     runs-on: ubuntu-latest
     container:

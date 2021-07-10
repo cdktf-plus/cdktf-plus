@@ -4,6 +4,10 @@
   "description": "A collection of helpful L2 / L3 constrcuts for cdktf",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://www.npmjs.com/"
+  },
   "scripts": {
     "build": "jsii --silence-warnings reserved-word",
     "package": "jsii-pacmak",
