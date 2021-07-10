@@ -1,0 +1,53 @@
+{
+  "name": "@cdktf-plus/core",
+  "version": "0.0.0",
+  "description": "A collection of helpful L2 / L3 constrcuts for cdktf",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "jsii --silence-warnings reserved-word",
+    "package": "jsii-pacmak",
+    "package:js": "jsii-pacmak --targets js",
+    "dist-clean": "rm -rf dist"
+  },
+  "author": "Sebastian Korfmann",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/cdktf-plus/cdktf-plus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdktf-plus/cdktf-plus.git",
+    "directory": "packages/@cdktf-plus/core"
+  },
+  "peerDependencies": {
+    "@cdktf/provider-external": "^0.0.52",
+    "@cdktf/provider-null": "^0.1.119",
+    "cdktf": "^0.4.1",
+    "constructs": "^3.3.97"
+  },
+  "devDependencies": {
+    "@cdktf/provider-external": "^0.0.52",
+    "@cdktf/provider-null": "^0.1.119",
+    "cdktf": "^0.4.1",
+    "constructs": "^3.3.97",
+    "jsii": "^1.31.0",
+    "jsii-pacmak": "^1.31.0",
+    "typescript": "^4.3.5",
+    "@types/node": "^16.3.1"
+  },
+  "dependencies": {
+    "hashdirectory": "^0.1.0"
+  },
+  "bundledDependencies": [
+    "hashdirectory"
+  ],
+  "jsii": {
+    "outdir": "dist",
+    "versionFormat": "short",
+    "targets": {
+      "python": {
+        "distName": "cdktf-plus",
+        "module": "cdktf_plus"
+      }
+    }
+  }
+}

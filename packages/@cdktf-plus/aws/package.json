@@ -1,0 +1,55 @@
+{
+  "name": "@cdktf-plus/aws",
+  "version": "0.0.0",
+  "description": "A collection of helpful L2 / L3 constrcuts for the @cdktf/provider-aws package",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "jsii --silence-warnings reserved-word",
+    "package": "jsii-pacmak",
+    "package:js": "jsii-pacmak --targets js",
+    "dist-clean": "rm -rf dist"
+  },
+  "author": "Sebastian Korfmann",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/cdktf-plus/cdktf-plus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdktf-plus/cdktf-plus.git",
+    "directory": "packages/@cdktf-plus/aws"
+  },
+  "peerDependencies": {
+    "@cdktf/provider-aws": "^1.0.115",
+    "cdktf": "^0.4.1",
+    "constructs": "^3.3.97",
+    "@cdktf-plus/core": "0.0.0",
+    "iam-floyd": "^0.207.0"
+  },
+  "devDependencies": {
+    "@cdktf/provider-aws": "^1.0.115",
+    "@types/node": "^16.3.1",
+    "cdktf": "^0.4.1",
+    "constructs": "^3.3.97",
+    "iam-floyd": "^0.207.0",
+    "jsii": "^1.31.0",
+    "jsii-pacmak": "^1.31.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@cdktf-plus/core": "0.0.0",
+    "esbuild": "^0.12.15"
+  },
+  "bundledDependencies": [
+    "esbuild"
+  ],
+  "jsii": {
+    "outdir": "dist",
+    "versionFormat": "short",
+    "targets": {
+      "python": {
+        "distName": "cdktf-plus",
+        "module": "cdktf_plus"
+      }
+    }
+  }
+}

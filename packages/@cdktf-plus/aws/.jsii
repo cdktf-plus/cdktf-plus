@@ -1,0 +1,1116 @@
+{
+  "author": {
+    "name": "Sebastian Korfmann",
+    "roles": [
+      "author"
+    ]
+  },
+  "bundled": {
+    "esbuild": "^0.12.15"
+  },
+  "dependencies": {
+    "@cdktf-plus/core": "0.0.0",
+    "@cdktf/provider-aws": "^1.0.115",
+    "cdktf": "^0.4.1",
+    "constructs": "^3.3.97",
+    "iam-floyd": "^0.207.0"
+  },
+  "dependencyClosure": {
+    "@cdktf-plus/core": {
+      "targets": {
+        "js": {
+          "npm": "@cdktf-plus/core"
+        },
+        "python": {
+          "distName": "cdktf-plus",
+          "module": "cdktf_plus"
+        }
+      }
+    },
+    "@cdktf/provider-aws": {
+      "targets": {
+        "dotnet": {
+          "namespace": "HashiCorp.Cdktf.Providers.Aws",
+          "packageId": "HashiCorp.Cdktf.Providers.Aws"
+        },
+        "js": {
+          "npm": "@cdktf/provider-aws"
+        },
+        "python": {
+          "distName": "cdktf-cdktf-provider-aws",
+          "module": "cdktf_cdktf_provider_aws"
+        }
+      }
+    },
+    "@cdktf/provider-external": {
+      "targets": {
+        "dotnet": {
+          "namespace": "HashiCorp.Cdktf.Providers.External",
+          "packageId": "HashiCorp.Cdktf.Providers.External"
+        },
+        "js": {
+          "npm": "@cdktf/provider-external"
+        },
+        "python": {
+          "distName": "cdktf-cdktf-provider-external",
+          "module": "cdktf_cdktf_provider_external"
+        }
+      }
+    },
+    "@cdktf/provider-null": {
+      "targets": {
+        "dotnet": {
+          "namespace": "HashiCorp.Cdktf.Providers.Null",
+          "packageId": "HashiCorp.Cdktf.Providers.Null"
+        },
+        "js": {
+          "npm": "@cdktf/provider-null"
+        },
+        "python": {
+          "distName": "cdktf-cdktf-provider-null",
+          "module": "cdktf_cdktf_provider_null"
+        }
+      }
+    },
+    "cdktf": {
+      "targets": {
+        "dotnet": {
+          "namespace": "HashiCorp.Cdktf",
+          "packageId": "HashiCorp.Cdktf"
+        },
+        "go": {
+          "moduleName": "github.com/hashicorp/terraform-cdk-go",
+          "packageName": "cdktf"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "cdktf",
+            "groupId": "com.hashicorp"
+          },
+          "package": "com.hashicorp.cdktf"
+        },
+        "js": {
+          "npm": "cdktf"
+        },
+        "python": {
+          "distName": "cdktf",
+          "module": "cdktf"
+        }
+      }
+    },
+    "constructs": {
+      "targets": {
+        "dotnet": {
+          "namespace": "Constructs",
+          "packageId": "Constructs"
+        },
+        "go": {
+          "moduleName": "github.com/aws/constructs-go"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "constructs",
+            "groupId": "software.constructs"
+          },
+          "package": "software.constructs"
+        },
+        "js": {
+          "npm": "constructs"
+        },
+        "python": {
+          "distName": "constructs",
+          "module": "constructs"
+        }
+      }
+    },
+    "iam-floyd": {
+      "targets": {
+        "dotnet": {
+          "namespace": "IAM.Floyd",
+          "packageId": "IAM.Floyd"
+        },
+        "java": {
+          "maven": {
+            "artifactId": "iam-floyd",
+            "groupId": "com.udondan"
+          },
+          "package": "com.udondan.iamFloyd"
+        },
+        "js": {
+          "npm": "iam-floyd"
+        },
+        "python": {
+          "distName": "iam-floyd",
+          "module": "iam_floyd"
+        }
+      }
+    }
+  },
+  "description": "A collection of helpful L2 / L3 constrcuts for the @cdktf/provider-aws package",
+  "homepage": "https://github.com/cdktf-plus/cdktf-plus",
+  "jsiiVersion": "1.31.0",
+  "license": "MPL-2.0",
+  "metadata": {
+    "jsii": {
+      "pacmak": {
+        "hasDefaultInterfaces": true
+      }
+    }
+  },
+  "name": "@cdktf-plus/aws",
+  "readme": {
+    "markdown": "# cdktf plus core\n\nHelpful Level 2 Constructs for common tasks"
+  },
+  "repository": {
+    "directory": "packages/@cdktf-plus/aws",
+    "type": "git",
+    "url": "https://github.com/cdktf-plus/cdktf-plus.git"
+  },
+  "schema": "jsii/0.10.0",
+  "targets": {
+    "js": {
+      "npm": "@cdktf-plus/aws"
+    },
+    "python": {
+      "distName": "cdktf-plus",
+      "module": "cdktf_plus"
+    }
+  },
+  "types": {
+    "@cdktf-plus/aws.AwsEcrRepository": {
+      "assembly": "@cdktf-plus/aws",
+      "base": "cdktf.Resource",
+      "fqn": "@cdktf-plus/aws.AwsEcrRepository",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/aws-ecr-repository/index.ts",
+          "line": 18
+        },
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "constructs.Construct"
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "config",
+            "type": {
+              "fqn": "@cdktf-plus/aws.AwsEcrRepositoryConfig"
+            }
+          }
+        ]
+      },
+      "interfaces": [
+        "@cdktf-plus/core.IDockerRepository"
+      ],
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/aws-ecr-repository/index.ts",
+        "line": 10
+      },
+      "name": "AwsEcrRepository",
+      "properties": [
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-ecr-repository/index.ts",
+            "line": 15
+          },
+          "name": "authorizationPassword",
+          "overrides": "@cdktf-plus/core.IDockerRepository",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-ecr-repository/index.ts",
+            "line": 16
+          },
+          "name": "authorizationUser",
+          "overrides": "@cdktf-plus/core.IDockerRepository",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-ecr-repository/index.ts",
+            "line": 13
+          },
+          "name": "dependable",
+          "overrides": "@cdktf-plus/core.IDockerRepository",
+          "type": {
+            "fqn": "cdktf.ITerraformDependable"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-ecr-repository/index.ts",
+            "line": 11
+          },
+          "name": "name",
+          "overrides": "@cdktf-plus/core.IDockerRepository",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-ecr-repository/index.ts",
+            "line": 12
+          },
+          "name": "resource",
+          "type": {
+            "fqn": "@cdktf/provider-aws.EcrRepository"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-ecr-repository/index.ts",
+            "line": 14
+          },
+          "name": "url",
+          "overrides": "@cdktf-plus/core.IDockerRepository",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.AwsEcrRepositoryConfig": {
+      "assembly": "@cdktf-plus/aws",
+      "datatype": true,
+      "fqn": "@cdktf-plus/aws.AwsEcrRepositoryConfig",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/aws-ecr-repository/index.ts",
+        "line": 6
+      },
+      "name": "AwsEcrRepositoryConfig",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-ecr-repository/index.ts",
+            "line": 7
+          },
+          "name": "name",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.AwsEventBridge": {
+      "assembly": "@cdktf-plus/aws",
+      "base": "cdktf.Resource",
+      "fqn": "@cdktf-plus/aws.AwsEventBridge",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/aws-event-bridge/event-bridge.ts",
+          "line": 10
+        },
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "constructs.Construct"
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "primitive": "string"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/aws-event-bridge/event-bridge.ts",
+        "line": 6
+      },
+      "methods": [
+        {
+          "locationInModule": {
+            "filename": "lib/aws-event-bridge/event-bridge.ts",
+            "line": 21
+          },
+          "name": "addIntegration",
+          "parameters": [
+            {
+              "name": "target",
+              "type": {
+                "union": {
+                  "types": [
+                    {
+                      "fqn": "@cdktf/provider-aws.LambdaFunction"
+                    },
+                    {
+                      "fqn": "@cdktf/provider-aws.SfnStateMachine"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "eventPattern",
+              "type": {
+                "collection": {
+                  "elementtype": {
+                    "primitive": "any"
+                  },
+                  "kind": "map"
+                }
+              }
+            }
+          ],
+          "returns": {
+            "type": {
+              "fqn": "@cdktf-plus/aws.EventBridgeTarget"
+            }
+          }
+        }
+      ],
+      "name": "AwsEventBridge",
+      "properties": [
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-event-bridge/event-bridge.ts",
+            "line": 7
+          },
+          "name": "bus",
+          "type": {
+            "fqn": "@cdktf/provider-aws.CloudwatchEventBus"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-event-bridge/event-bridge.ts",
+            "line": 8
+          },
+          "name": "name",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.AwsLambdaFunction": {
+      "assembly": "@cdktf-plus/aws",
+      "base": "cdktf.Resource",
+      "fqn": "@cdktf-plus/aws.AwsLambdaFunction",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/aws-lambda-function/index.ts",
+          "line": 34
+        },
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "constructs.Construct"
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "config",
+            "type": {
+              "fqn": "@cdktf-plus/aws.AwsLambdaFunctionConfig"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/aws-lambda-function/index.ts",
+        "line": 29
+      },
+      "name": "AwsLambdaFunction",
+      "properties": [
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-lambda-function/index.ts",
+            "line": 30
+          },
+          "name": "fn",
+          "type": {
+            "fqn": "@cdktf/provider-aws.LambdaFunction"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-lambda-function/index.ts",
+            "line": 32
+          },
+          "name": "logGroup",
+          "type": {
+            "fqn": "@cdktf/provider-aws.CloudwatchLogGroup"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-lambda-function/index.ts",
+            "line": 31
+          },
+          "name": "serviceRole",
+          "type": {
+            "fqn": "@cdktf-plus/aws.AwsServiceRole"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.AwsLambdaFunctionConfig": {
+      "assembly": "@cdktf-plus/aws",
+      "datatype": true,
+      "fqn": "@cdktf-plus/aws.AwsLambdaFunctionConfig",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/aws-lambda-function/index.ts",
+        "line": 7
+      },
+      "name": "AwsLambdaFunctionConfig",
+      "properties": [
+        {
+          "abstract": true,
+          "docs": {
+            "summary": "The environment variables to be passed to the Lambda function."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-lambda-function/index.ts",
+            "line": 11
+          },
+          "name": "environment",
+          "optional": true,
+          "type": {
+            "collection": {
+              "elementtype": {
+                "primitive": "string"
+              },
+              "kind": "map"
+            }
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "remarks": "Defaults to 7.",
+            "summary": "The log retention period in days."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-lambda-function/index.ts",
+            "line": 16
+          },
+          "name": "logRetentionInDays",
+          "optional": true,
+          "type": {
+            "primitive": "number"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "remarks": "Defaults to 512.",
+            "summary": "The memory limit in MB."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-lambda-function/index.ts",
+            "line": 21
+          },
+          "name": "memorySize",
+          "optional": true,
+          "type": {
+            "primitive": "number"
+          }
+        },
+        {
+          "abstract": true,
+          "docs": {
+            "remarks": "Defaults to 15.",
+            "summary": "The timout in seconds."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-lambda-function/index.ts",
+            "line": 26
+          },
+          "name": "timeout",
+          "optional": true,
+          "type": {
+            "primitive": "number"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.AwsServiceRole": {
+      "assembly": "@cdktf-plus/aws",
+      "base": "cdktf.Resource",
+      "fqn": "@cdktf-plus/aws.AwsServiceRole",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/aws-iam/index.ts",
+          "line": 26
+        },
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "constructs.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "@cdktf-plus/aws.AwsServiceRoleOptions"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/aws-iam/index.ts",
+        "line": 22
+      },
+      "methods": [
+        {
+          "locationInModule": {
+            "filename": "lib/aws-iam/index.ts",
+            "line": 72
+          },
+          "name": "addPolicyStatements",
+          "parameters": [
+            {
+              "name": "statements",
+              "type": {
+                "fqn": "iam-floyd.PolicyStatement"
+              },
+              "variadic": true
+            }
+          ],
+          "variadic": true
+        }
+      ],
+      "name": "AwsServiceRole",
+      "properties": [
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-iam/index.ts",
+            "line": 23
+          },
+          "name": "role",
+          "type": {
+            "fqn": "@cdktf/provider-aws.IamRole"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.AwsServiceRoleOptions": {
+      "assembly": "@cdktf-plus/aws",
+      "datatype": true,
+      "fqn": "@cdktf-plus/aws.AwsServiceRoleOptions",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/aws-iam/index.ts",
+        "line": 16
+      },
+      "name": "AwsServiceRoleOptions",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-iam/index.ts",
+            "line": 19
+          },
+          "name": "policyStatements",
+          "type": {
+            "collection": {
+              "elementtype": {
+                "fqn": "iam-floyd.PolicyStatement"
+              },
+              "kind": "array"
+            }
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-iam/index.ts",
+            "line": 18
+          },
+          "name": "service",
+          "type": {
+            "union": {
+              "types": [
+                {
+                  "primitive": "string"
+                },
+                {
+                  "collection": {
+                    "elementtype": {
+                      "primitive": "string"
+                    },
+                    "kind": "array"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-iam/index.ts",
+            "line": 17
+          },
+          "name": "name",
+          "optional": true,
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.DockerFunction": {
+      "assembly": "@cdktf-plus/aws",
+      "base": "@cdktf-plus/aws.AwsLambdaFunction",
+      "fqn": "@cdktf-plus/aws.DockerFunction",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/docker-function/index.ts",
+          "line": 15
+        },
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "constructs.Construct"
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "config",
+            "type": {
+              "fqn": "@cdktf-plus/aws.DockerFunctionConfig"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/docker-function/index.ts",
+        "line": 12
+      },
+      "name": "DockerFunction",
+      "properties": [
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/docker-function/index.ts",
+            "line": 13
+          },
+          "name": "dockerAsset",
+          "type": {
+            "fqn": "@cdktf-plus/core.DockerAsset"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.DockerFunctionConfig": {
+      "assembly": "@cdktf-plus/aws",
+      "datatype": true,
+      "fqn": "@cdktf-plus/aws.DockerFunctionConfig",
+      "interfaces": [
+        "@cdktf-plus/aws.AwsLambdaFunctionConfig"
+      ],
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/docker-function/index.ts",
+        "line": 8
+      },
+      "name": "DockerFunctionConfig",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/docker-function/index.ts",
+            "line": 9
+          },
+          "name": "path",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.EventBridgeSnoop": {
+      "assembly": "@cdktf-plus/aws",
+      "base": "cdktf.Resource",
+      "fqn": "@cdktf-plus/aws.EventBridgeSnoop",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/aws-event-bridge/snoop.ts",
+          "line": 13
+        },
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "constructs.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "@cdktf-plus/aws.EventBridgeSnoopProps"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/aws-event-bridge/snoop.ts",
+        "line": 12
+      },
+      "name": "EventBridgeSnoop"
+    },
+    "@cdktf-plus/aws.EventBridgeSnoopProps": {
+      "assembly": "@cdktf-plus/aws",
+      "datatype": true,
+      "fqn": "@cdktf-plus/aws.EventBridgeSnoopProps",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/aws-event-bridge/snoop.ts",
+        "line": 8
+      },
+      "name": "EventBridgeSnoopProps",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-event-bridge/snoop.ts",
+            "line": 9
+          },
+          "name": "eventBridge",
+          "type": {
+            "fqn": "@cdktf/provider-aws.CloudwatchEventBus"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.EventBridgeTarget": {
+      "assembly": "@cdktf-plus/aws",
+      "base": "cdktf.Resource",
+      "fqn": "@cdktf-plus/aws.EventBridgeTarget",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/aws-event-bridge/integration.ts",
+          "line": 14
+        },
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "constructs.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "@cdktf-plus/aws.TargetProps"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/aws-event-bridge/integration.ts",
+        "line": 13
+      },
+      "name": "EventBridgeTarget"
+    },
+    "@cdktf-plus/aws.NodejsFunction": {
+      "assembly": "@cdktf-plus/aws",
+      "base": "@cdktf-plus/aws.AwsLambdaFunction",
+      "fqn": "@cdktf-plus/aws.NodejsFunction",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/nodejs-function/index.ts",
+          "line": 30
+        },
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "constructs.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "config",
+            "type": {
+              "fqn": "@cdktf-plus/aws.NodejsFunctionConfig"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/nodejs-function/index.ts",
+        "line": 26
+      },
+      "name": "NodejsFunction",
+      "properties": [
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/nodejs-function/index.ts",
+            "line": 27
+          },
+          "name": "asset",
+          "type": {
+            "fqn": "cdktf.TerraformAsset"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/nodejs-function/index.ts",
+            "line": 28
+          },
+          "name": "bundledPath",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.NodejsFunctionConfig": {
+      "assembly": "@cdktf-plus/aws",
+      "datatype": true,
+      "fqn": "@cdktf-plus/aws.NodejsFunctionConfig",
+      "interfaces": [
+        "@cdktf-plus/aws.AwsLambdaFunctionConfig"
+      ],
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/nodejs-function/index.ts",
+        "line": 7
+      },
+      "name": "NodejsFunctionConfig",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/nodejs-function/index.ts",
+            "line": 8
+          },
+          "name": "path",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@cdktf-plus/aws.Policy": {
+      "assembly": "@cdktf-plus/aws",
+      "fqn": "@cdktf-plus/aws.Policy",
+      "initializer": {},
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/aws-iam/index.ts",
+        "line": 7
+      },
+      "methods": [
+        {
+          "locationInModule": {
+            "filename": "lib/aws-iam/index.ts",
+            "line": 8
+          },
+          "name": "document",
+          "parameters": [
+            {
+              "name": "statement",
+              "type": {
+                "fqn": "iam-floyd.PolicyStatement"
+              }
+            }
+          ],
+          "returns": {
+            "type": {
+              "primitive": "string"
+            }
+          },
+          "static": true
+        }
+      ],
+      "name": "Policy"
+    },
+    "@cdktf-plus/aws.SnoopEventsAspect": {
+      "assembly": "@cdktf-plus/aws",
+      "fqn": "@cdktf-plus/aws.SnoopEventsAspect",
+      "initializer": {
+        "locationInModule": {
+          "filename": "lib/aws-event-bridge/snoop.ts",
+          "line": 41
+        }
+      },
+      "interfaces": [
+        "constructs.IAspect"
+      ],
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/aws-event-bridge/snoop.ts",
+        "line": 40
+      },
+      "methods": [
+        {
+          "docs": {
+            "summary": "All aspects can visit an IConstruct."
+          },
+          "locationInModule": {
+            "filename": "lib/aws-event-bridge/snoop.ts",
+            "line": 43
+          },
+          "name": "visit",
+          "overrides": "constructs.IAspect",
+          "parameters": [
+            {
+              "name": "node",
+              "type": {
+                "fqn": "constructs.IConstruct"
+              }
+            }
+          ]
+        }
+      ],
+      "name": "SnoopEventsAspect"
+    },
+    "@cdktf-plus/aws.TargetProps": {
+      "assembly": "@cdktf-plus/aws",
+      "datatype": true,
+      "fqn": "@cdktf-plus/aws.TargetProps",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/aws-event-bridge/integration.ts",
+        "line": 7
+      },
+      "name": "TargetProps",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-event-bridge/integration.ts",
+            "line": 8
+          },
+          "name": "eventBridge",
+          "type": {
+            "fqn": "@cdktf/provider-aws.CloudwatchEventBus"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-event-bridge/integration.ts",
+            "line": 10
+          },
+          "name": "eventPattern",
+          "type": {
+            "collection": {
+              "elementtype": {
+                "primitive": "any"
+              },
+              "kind": "map"
+            }
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/aws-event-bridge/integration.ts",
+            "line": 9
+          },
+          "name": "target",
+          "type": {
+            "union": {
+              "types": [
+                {
+                  "fqn": "@cdktf/provider-aws.LambdaFunction"
+                },
+                {
+                  "fqn": "@cdktf/provider-aws.SfnStateMachine"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "version": "0.0.0",
+  "fingerprint": "NwWKkwerTxTDaNXzUEmGS7b/v5+m6NKkGpRnZDldjEQ="
+}

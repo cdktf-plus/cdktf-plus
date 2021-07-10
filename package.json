@@ -1,0 +1,30 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Level 2 / 3 constructs for cdktf",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdktf-plus/cdktf-plus.git"
+  },
+  "keywords": [
+    "cdktf"
+  ],
+  "author": "Sebastian Korfmann",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/cdktf-plus/cdktf-plus/issues"
+  },
+  "homepage": "https://github.com/cdktf-plus/cdktf-plus#readme",
+  "workspaces": {
+    "packages": [
+      "packages/@cdktf-plus/*"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
