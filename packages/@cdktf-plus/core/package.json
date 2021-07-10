@@ -30,18 +30,20 @@
   "devDependencies": {
     "@cdktf/provider-external": "^0.0.52",
     "@cdktf/provider-null": "^0.1.119",
+    "@types/node": "^16.3.1",
     "cdktf": "^0.4.1",
     "constructs": "^3.3.97",
     "jsii": "^1.31.0",
     "jsii-pacmak": "^1.31.0",
-    "typescript": "^4.3.5",
-    "@types/node": "^16.3.1"
+    "typescript": "^4.3.5"
   },
   "dependencies": {
+    "docker-registry-client": "^3.3.0",
     "hashdirectory": "^0.1.0"
   },
   "bundledDependencies": [
-    "hashdirectory"
+    "hashdirectory",
+    "docker-registry-client"
   ],
   "jsii": {
     "outdir": "dist",

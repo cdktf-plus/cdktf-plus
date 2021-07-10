@@ -30,7 +30,10 @@
       "**/esbuild/**",
       "hashdirectory",
       "**/hashdirectory",
-      "**/hashdirectory/**"
+      "**/hashdirectory/**",
+      "docker-registry-client",
+      "**/docker-registry-client",
+      "**/docker-registry-client/**"
     ]
 
   },
