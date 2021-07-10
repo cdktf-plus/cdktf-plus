@@ -1,10 +1,11 @@
 {
   "name": "root",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Level 2 / 3 constructs for cdktf",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "lerna run --scope @cdktf-plus/* build",
+    "package": "lerna run package && tools/collect-dist.sh"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,16 @@
   "workspaces": {
     "packages": [
       "packages/@cdktf-plus/*"
+    ],
+    "nohoist": [
+      "esbuild",
+      "**/esbuild",
+      "**/esbuild/**",
+      "hashdirectory",
+      "**/hashdirectory",
+      "**/hashdirectory/**"
     ]
+
   },
   "devDependencies": {
     "lerna": "^4.0.0"
