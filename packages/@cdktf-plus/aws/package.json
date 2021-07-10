@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://www.npmjs.com/"
+    "access": "public"
   },
   "scripts": {
     "build": "jsii --silence-warnings reserved-word",
