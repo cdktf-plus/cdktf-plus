@@ -47,8 +47,8 @@
     "versionFormat": "short",
     "targets": {
       "python": {
-        "distName": "cdktf-plus",
-        "module": "cdktf_plus"
+        "distName": "cdktf-plus-aws",
+        "module": "cdktf_plus_aws"
       }
     }
   }
