@@ -1,7 +1,8 @@
 import * as path from 'path';
 import { TerraformAsset, AssetType } from 'cdktf';
 import { Construct } from 'constructs';
-import { buildSync } from 'esbuild';
+// This might be 10x slower than a native build - see https://esbuild.github.io/getting-started/#wasm
+import { buildSync } from 'esbuild-wasm';
 import { AwsLambdaFunction, AwsLambdaFunctionConfig } from '../aws-lambda-function';
 
 export interface NodejsFunctionConfig extends AwsLambdaFunctionConfig {

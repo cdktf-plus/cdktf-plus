@@ -25,9 +25,9 @@
       "packages/@cdktf-plus/*"
     ],
     "nohoist": [
-      "esbuild",
-      "**/esbuild",
-      "**/esbuild/**",
+      "esbuild-wasm",
+      "**/esbuild-wasm",
+      "**/esbuild-wasm/**",
       "hashdirectory",
       "**/hashdirectory",
       "**/hashdirectory/**",

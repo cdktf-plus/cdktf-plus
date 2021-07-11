@@ -40,10 +40,10 @@
   },
   "dependencies": {
     "@cdktf-plus/core": "0.0.0",
-    "esbuild": "^0.12.15"
+    "esbuild-wasm": "^0.12.15"
   },
   "bundledDependencies": [
-    "esbuild"
+    "esbuild-wasm"
   ],
   "jsii": {
     "outdir": "dist",
