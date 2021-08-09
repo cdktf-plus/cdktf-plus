@@ -23,20 +23,20 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@cdktf/provider-aws@^1.0.115":
-  version "1.0.115"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-1.0.115.tgz#36f3434fc024cd34536ce5e8b1c48f84b82a0084"
-  integrity sha512-UapmsGhsmaIUqHU+QDjSLvPTfDjnSgUOQDG+w9B1W++cZNHMPAAybUZSTXfmQLwknyL77CVgctBF8uV2/10jLg==
+"@cdktf/provider-aws@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-2.0.3.tgz#a94cbb25e5cbe861dfceb1c4190e58d6bba33346"
+  integrity sha512-ovVPlPsA1aNjaeQPYLavPFMCqWPbtVdsV/KgMNZ8/Dl8jl5+U4la4sohvMA4/muFAFc46uB0ZRgNZsdmMo1o0w==
 
-"@cdktf/provider-external@^0.0.52":
-  version "0.0.52"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-external/-/provider-external-0.0.52.tgz#54ce7052db4ca9d26511cb879429574fc16ea65c"
-  integrity sha512-wuYaAVDmtLhgHqAaFXzdiEUtjR/y2TgSrs7tBkd19lLmeJLOHuvkxhWN4QKtFguDAb+fe3lhBSWSy4eOx2PQcg==
+"@cdktf/provider-external@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-external/-/provider-external-0.1.5.tgz#4f18aa7548067b8ec2ff4db52b36798974bff2be"
+  integrity sha512-qYsO8qwWS644MC9BWiBwFIyBY1K3d6lSRZ8Tokw8GA5MxvIdl/5uKhwJwrlXFjxiyIYWzleXkDf52obE+wvxVA==
 
-"@cdktf/provider-null@^0.1.119":
-  version "0.1.119"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-0.1.119.tgz#6a3f9ae556672c1860492ccb40d31a00958a4cd1"
-  integrity sha512-Q4jWAE28fxCD56nsbeNjA5Vrbk7CAtrseHSDQFWTaedLsG0RP+S2QHp2d9jYlA/LfXQy36RRlqnISwR2ZsWzbA==
+"@cdktf/provider-null@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-0.2.2.tgz#a7aa9344e9fff6ef8a6ac2c3ebcf906700c0a19e"
+  integrity sha512-KAma+lTFMYkN8jFkP+CpDDydaAI7rT61tj01pJsL+2WGClZQEJnJCxEHAgjeVEeE06Qn5j691s4KwgK2fAy9Rg==
 
 "@hutson/parse-repository-url@^3.0.0":
   version "3.0.2"

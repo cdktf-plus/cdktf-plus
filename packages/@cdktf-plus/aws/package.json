@@ -22,10 +22,10 @@
     "directory": "packages/@cdktf-plus/aws"
   },
   "peerDependencies": {
-    "@cdktf/provider-aws": "^1.0.115",
+    "@cdktf-plus/core": "0.0.0",
+    "@cdktf/provider-aws": "^2.0.3",
     "cdktf": "^0.5",
     "constructs": "^3.3.97",
-    "@cdktf-plus/core": "0.0.0",
     "iam-floyd": "^0.207.0"
   },
   "devDependencies": {
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@cdktf-plus/core": "0.0.0",
+    "@cdktf/provider-aws": "^2.0.3",
     "esbuild-wasm": "^0.12.15"
   },
   "bundledDependencies": [
