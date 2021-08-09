@@ -24,6 +24,18 @@ export interface AwsLambdaFunctionConfig {
    * The timout in seconds. Defaults to 15.
    */
   readonly timeout?: number;
+
+  /**
+   * The services allowed to assume the Lambda role.
+   */
+  readonly allowedServices?: string[];
+}
+
+const truncateString = (str: string, num: number) => {
+  if (str.length <= num) {
+    return str
+  }
+  return str.slice(0, num)
 }
 
 export class AwsLambdaFunction extends Resource {
@@ -34,10 +46,16 @@ export class AwsLambdaFunction extends Resource {
   constructor(scope: Construct, name: string, config: AwsLambdaFunctionConfig) {
     super(scope, name);
 
-    const { environment: variables, logRetentionInDays = 7, memorySize = 512, timeout = 15 } = config;
+    const {
+      environment: variables,
+      logRetentionInDays = 7,
+      memorySize = 512,
+      timeout = 15,
+      allowedServices = 'lambda.amazonaws.com'
+    } = config;
 
     const id = Node.of(this).addr
-    const fnName = `${name}-${id}`;
+    const fnName = truncateString(`${name}-${id}`, 64);
 
     const logGroup = new aws.CloudwatchLogGroup(this, 'snoop-log-group', {
       name: `/aws/lambda/${fnName}`,
@@ -47,7 +65,7 @@ export class AwsLambdaFunction extends Resource {
     this.logGroup = logGroup;
 
     this.serviceRole = new AwsServiceRole(this, 'server-role', {
-      service: 'lambda.amazonaws.com',
+      service: allowedServices,
       policyStatements: [
         new iam.Logs()
           .allow()

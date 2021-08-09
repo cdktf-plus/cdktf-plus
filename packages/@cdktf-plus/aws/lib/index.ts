@@ -1,3 +1,4 @@
+export * from './aws-utils';
 export * from './aws-ecr-repository';
 export * from './aws-event-bridge';
 export * from './aws-iam';
