@@ -33,7 +33,11 @@
       "**/hashdirectory/**",
       "docker-registry-client",
       "**/docker-registry-client",
-      "**/docker-registry-client/**"
+      "**/docker-registry-client/**",
+      "execa",
+      "**/execa",
+      "**/execa/**"
+
     ]
 
   },

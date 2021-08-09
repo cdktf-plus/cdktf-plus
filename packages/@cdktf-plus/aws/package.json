@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "@cdktf/provider-aws": "^1.0.115",
-    "cdktf": "^0.4.1",
+    "cdktf": "^0.5",
     "constructs": "^3.3.97",
     "@cdktf-plus/core": "0.0.0",
     "iam-floyd": "^0.207.0"
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@cdktf/provider-aws": "^1.0.115",
     "@types/node": "^16.3.1",
-    "cdktf": "^0.4.1",
+    "cdktf": "^0.5",
     "constructs": "^3.3.97",
     "iam-floyd": "^0.207.0",
     "jsii": "^1.31.0",
