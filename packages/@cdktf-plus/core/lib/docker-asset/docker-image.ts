@@ -1,6 +1,6 @@
 
 import { Construct, } from "constructs";
-import { TerraformResource } from 'cdktf';
+import { IResolvable, TerraformResource } from 'cdktf';
 import { CustomDataSource } from '../custom-data-source'
 import { IDockerRepository } from "./docker-repository";
 
@@ -10,7 +10,7 @@ export interface CustomDockerImageConfig {
 }
 
 export class CustomDockerImage extends CustomDataSource  {
-  public readonly digest: string;
+  public readonly digest: string | IResolvable;
   public readonly url: string;
 
   constructor(scope: Construct, name: string, config: CustomDockerImageConfig) {

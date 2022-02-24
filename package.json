@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Level 2 / 3 constructs for cdktf",
   "scripts": {
@@ -37,9 +37,7 @@
       "execa",
       "**/execa",
       "**/execa/**"
-
     ]
-
   },
   "devDependencies": {
     "lerna": "^4.0.0"

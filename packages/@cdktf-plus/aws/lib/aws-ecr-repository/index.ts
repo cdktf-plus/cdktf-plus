@@ -1,6 +1,6 @@
 import { Construct, } from "constructs";
 import { ITerraformDependable, Resource } from 'cdktf';
-import { EcrRepository, DataAwsEcrAuthorizationToken } from "@cdktf/provider-aws";
+import { EcrRepository, DataAwsEcrAuthorizationToken } from "@cdktf/provider-aws/lib/ecr";
 import { IDockerRepository } from '@cdktf-plus/core'
 
 export interface AwsEcrRepositoryConfig {

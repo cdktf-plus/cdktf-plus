@@ -29,7 +29,7 @@ export class DockerFunction extends AwsLambdaFunction {
     this.fn.packageType = "Image";
     this.fn.publish = true;
 
-    new aws.LambdaAlias(this, 'alias', {
+    new aws.lambdafunction.LambdaAlias(this, 'alias', {
       name: "local",
       functionVersion: this.fn.version,
       functionName: this.fn.arn

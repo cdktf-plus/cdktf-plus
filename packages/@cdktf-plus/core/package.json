@@ -22,24 +22,24 @@
     "directory": "packages/@cdktf-plus/core"
   },
   "peerDependencies": {
-    "@cdktf/provider-external": "^0.1.5",
-    "@cdktf/provider-null": "^0.2.2",
-    "cdktf": "^0.5",
-    "constructs": "^3.3.97"
+    "@cdktf/provider-external": "^0.4.31",
+    "@cdktf/provider-null": "^0.5.31",
+    "cdktf": "^0.9.2",
+    "constructs": "^10.0.71"
   },
   "devDependencies": {
-    "@cdktf/provider-external": "^0.0.52",
-    "@cdktf/provider-null": "^0.1.119",
+    "@cdktf/provider-external": "^0.4.31",
+    "@cdktf/provider-null": "^0.5.31",
     "@types/node": "^16.3.1",
-    "cdktf": "^0.5",
-    "constructs": "^3.3.97",
-    "jsii": "^1.31.0",
-    "jsii-pacmak": "^1.31.0",
+    "cdktf": "^0.9.2",
+    "constructs": "^10.0.71",
+    "jsii": "^1.54.0",
+    "jsii-pacmak": "^1.54.0",
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@cdktf/provider-external": "^0.1.5",
-    "@cdktf/provider-null": "^0.2.2",
+    "@cdktf/provider-external": "^0.4.31",
+    "@cdktf/provider-null": "^0.5.31",
     "docker-registry-client": "^3.3.0",
     "execa": "^5.1.1",
     "hashdirectory": "^0.1.0"

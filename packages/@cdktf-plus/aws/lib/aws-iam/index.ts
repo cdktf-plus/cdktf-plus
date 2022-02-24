@@ -1,7 +1,7 @@
 import { PolicyStatement } from 'iam-floyd';
 import { Construct, Node } from 'constructs';
 import { Resource, Lazy, IResolveContext } from 'cdktf';
-import * as aws from '@cdktf/provider-aws';
+import { IamRole, IamPolicy, IamRolePolicyAttachment } from '@cdktf/provider-aws/lib/iam';
 import * as iam from 'iam-floyd';
 
 export class Policy {
@@ -20,7 +20,7 @@ export interface AwsServiceRoleOptions {
 }
 
 export class AwsServiceRole extends Resource {
-  public readonly role: aws.IamRole
+  public readonly role: IamRole
   private readonly policyStatements: iam.PolicyStatement[] = [];
 
   constructor(scope: Construct, id: string, props: AwsServiceRoleOptions) {
@@ -45,12 +45,12 @@ export class AwsServiceRole extends Resource {
       statement.forService(service)
     }
 
-    this.role = new aws.IamRole(this, `role`, {
+    this.role = new IamRole(this, `role`, {
       name,
       assumeRolePolicy: Policy.document(statement.toJSON())
     })
 
-    const notesPolicy = new aws.IamPolicy(this, `role-policy`, {
+    const notesPolicy = new IamPolicy(this, `role-policy`, {
       name: `${name}-role-policy`,
       path: '/',
       policy: Lazy.stringValue({
@@ -63,7 +63,7 @@ export class AwsServiceRole extends Resource {
       })
     })
 
-    new aws.IamRolePolicyAttachment(this, `PolicyAttachment`, {
+    new IamRolePolicyAttachment(this, `PolicyAttachment`, {
       policyArn: notesPolicy.arn,
       role: this.role.name
     })

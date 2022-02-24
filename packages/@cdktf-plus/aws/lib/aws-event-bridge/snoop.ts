@@ -1,12 +1,12 @@
-import { Resource, TerraformOutput } from 'cdktf';
-import { IConstruct, Construct, IAspect } from 'constructs';
+import { Resource, TerraformOutput, IAspect } from 'cdktf';
+import { IConstruct, Construct } from 'constructs';
 import { EventBridgeTarget } from './integration';
 import { NodejsFunction } from '../nodejs-function';
 import * as aws from '@cdktf/provider-aws';
 import * as path from 'path';
 
 export interface EventBridgeSnoopProps {
-  readonly eventBridge: aws.CloudwatchEventBus;
+  readonly eventBridge: aws.eventbridge.CloudwatchEventBus;
 }
 
 export class EventBridgeSnoop extends Resource {
@@ -41,7 +41,7 @@ export class SnoopEventsAspect implements IAspect {
   constructor() {}
 
   public visit(node: IConstruct): void {
-    if (node instanceof aws.CloudwatchEventBus) {
+    if (node instanceof aws.eventbridge.CloudwatchEventBus) {
       new EventBridgeSnoop(node, 'snoop-events', {
         eventBridge: node
       })

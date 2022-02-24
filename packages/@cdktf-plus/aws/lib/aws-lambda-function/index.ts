@@ -27,9 +27,9 @@ export interface AwsLambdaFunctionConfig {
 }
 
 export class AwsLambdaFunction extends Resource {
-  public readonly fn: aws.LambdaFunction;
+  public readonly fn: aws.lambdafunction.LambdaFunction;
   public readonly serviceRole: AwsServiceRole;
-  public readonly logGroup: aws.CloudwatchLogGroup;;
+  public readonly logGroup: aws.cloudwatch.CloudwatchLogGroup;;
 
   constructor(scope: Construct, name: string, config: AwsLambdaFunctionConfig) {
     super(scope, name);
@@ -39,7 +39,7 @@ export class AwsLambdaFunction extends Resource {
     const id = Node.of(this).addr
     const fnName = `${name}-${id}`;
 
-    const logGroup = new aws.CloudwatchLogGroup(this, 'snoop-log-group', {
+    const logGroup = new aws.cloudwatch.CloudwatchLogGroup(this, 'snoop-log-group', {
       name: `/aws/lambda/${fnName}`,
       retentionInDays: logRetentionInDays
     });
@@ -57,19 +57,18 @@ export class AwsLambdaFunction extends Resource {
       ]
     })
 
-    this.fn = new aws.LambdaFunction(this, 'fn', {
+    const fnOptions: aws.lambdafunction.LambdaFunctionConfig = {
       functionName: fnName,
       role: this.serviceRole.role.arn,
       memorySize,
       timeout,
-      dependsOn: [logGroup]
-    })
-
-    if (variables) {
-      this.fn.environment = [{
+      environment: {
         variables
-      }]
+      },
+      dependsOn: [logGroup]
     }
+
+    this.fn = new aws.lambdafunction.LambdaFunction(this, 'fn', fnOptions)
 
     new TerraformOutput(this, `${fnName}-lambda-arn`, {
       value: this.fn.arn
