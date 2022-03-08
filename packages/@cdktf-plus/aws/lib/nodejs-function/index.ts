@@ -41,7 +41,9 @@ export class NodejsFunction extends AwsLambdaFunction {
       type: AssetType.ARCHIVE,
     });
 
-    this.fn.handler = 'index.handler';
+    const fileName = path.basename(config.path, '.ts');
+
+    this.fn.handler = `${fileName}.handler`;
     this.fn.filename = this.asset.path;
     this.fn.sourceCodeHash = this.asset.assetHash;
     this.fn.runtime = 'nodejs14.x';
