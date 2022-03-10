@@ -7,9 +7,10 @@ import { AwsLambdaFunction, AwsLambdaFunctionConfig } from '../aws-lambda-functi
 
 export interface NodejsFunctionConfig extends AwsLambdaFunctionConfig {
   readonly path: string;
+  readonly external?: string[];
 }
 
-const bundle = (workingDirectory: string, entryPoint: string) => {
+const bundle = (workingDirectory: string, entryPoint: string, external?: string[]) => {
   buildSync({
     entryPoints: [entryPoint],
     platform: 'node',
@@ -17,6 +18,7 @@ const bundle = (workingDirectory: string, entryPoint: string) => {
     bundle: true,
     format: 'cjs',
     sourcemap: 'external',
+    external,
     outdir: 'dist',
     absWorkingDir: workingDirectory,
   });
@@ -33,7 +35,7 @@ export class NodejsFunction extends AwsLambdaFunction {
     super(scope, id, rest);
 
     const workingDirectory = path.resolve(path.dirname(config.path));
-    const distPath = bundle(workingDirectory, path.basename(config.path));
+    const distPath = bundle(workingDirectory, path.basename(config.path), config.external);
     this.bundledPath = path.join(distPath, `${path.basename(config.path, '.ts')}.js`);
 
     this.asset = new TerraformAsset(this, 'lambda-asset', {
