@@ -1,7 +1,7 @@
 import { Resource, TerraformOutput, IAspect } from 'cdktf';
 import { IConstruct, Construct } from 'constructs';
 import { EventBridgeTarget } from './integration';
-import { NodejsFunction } from '../nodejs-function';
+import { NodejsLambdaFunction } from '../nodejs-lambda-function';
 import * as aws from '@cdktf/provider-aws';
 import * as path from 'path';
 
@@ -15,7 +15,7 @@ export class EventBridgeSnoop extends Resource {
 
     const { eventBridge } = props;
 
-    const lambda = new NodejsFunction(this, 'authorizer', {
+    const lambda = new NodejsLambdaFunction(this, 'authorizer', {
       path: path.join(__dirname, 'handler/index.ts'),
       logRetentionInDays: 1,
       memorySize: 128,
