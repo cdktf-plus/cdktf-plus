@@ -24,10 +24,10 @@ export class DockerAsset extends Resource {
       triggers: {
         folderhash: hashdirectory.sync(this.workingDirectory),
         name: this.repository.name
-      }
+      },
+      dependsOn: [this.repository.dependable]
     });
 
-    this.buildAndPush.addOverride('depends_on', [this.repository.dependable.fqn])
     this.dockerBuildCommand()
 
     this.dockerImage = new CustomDockerImage(this, 'image', {
