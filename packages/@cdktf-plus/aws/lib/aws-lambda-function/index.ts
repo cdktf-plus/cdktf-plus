@@ -65,13 +65,13 @@ export class AwsLambdaFunction extends Resource {
       role: this.serviceRole.role.arn,
       memorySize,
       timeout,
-      environment: Lazy.anyValue({
-        produce: (_context: IResolveContext) => {
-          return {
-            variables: this.environment
+      environment: {
+        variables: Lazy.anyValue({
+          produce: (_context: IResolveContext) => {
+            return this.environment
           }
-        }
-      }) as any,
+        }) as any
+      },
       dependsOn: [logGroup]
     }
 
