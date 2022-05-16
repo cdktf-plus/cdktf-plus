@@ -1,5 +1,5 @@
 import { Construct, Node } from 'constructs';
-import { Resource, TerraformOutput } from 'cdktf';
+import { IResolveContext, Lazy, Resource, TerraformOutput } from 'cdktf';
 import * as aws from '@cdktf/provider-aws';
 import { AwsServiceRole } from '../aws-iam';
 import * as iam from 'iam-floyd';
@@ -29,12 +29,15 @@ export interface AwsLambdaFunctionConfig {
 export class AwsLambdaFunction extends Resource {
   public readonly fn: aws.lambdafunction.LambdaFunction;
   public readonly serviceRole: AwsServiceRole;
-  public readonly logGroup: aws.cloudwatch.CloudwatchLogGroup;;
+  public readonly logGroup: aws.cloudwatch.CloudwatchLogGroup;
+  public readonly environment: {[key: string]: string};
 
   constructor(scope: Construct, name: string, config: AwsLambdaFunctionConfig) {
     super(scope, name);
 
     const { environment: variables, logRetentionInDays = 7, memorySize = 512, timeout = 15 } = config;
+
+    this.environment = variables || {};
 
     const id = Node.of(this).addr
     const fnName = `${name}-${id}`;
@@ -62,9 +65,13 @@ export class AwsLambdaFunction extends Resource {
       role: this.serviceRole.role.arn,
       memorySize,
       timeout,
-      environment: {
-        variables
-      },
+      environment: Lazy.anyValue({
+        produce: (_context: IResolveContext) => {
+          return {
+            variables: this.environment
+          }
+        }
+      }) as any,
       dependsOn: [logGroup]
     }
 
