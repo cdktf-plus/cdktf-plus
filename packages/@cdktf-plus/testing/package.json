@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "package": "mkdir -p dist/js && npm pack --pack-destination dist/js",
+    "package": "mkdir -p dist/js && npm pack && mv *.tgz ./dist/js/",
     "package:js": "jsii-pacmak --targets js",
     "dist-clean": "rm -rf dist",
     "test": "jest"
