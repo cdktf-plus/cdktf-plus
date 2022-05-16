@@ -1,12 +1,16 @@
 import * as path from 'path';
-import { testRunner } from '../lib';
+import { testRunner, CdktfStack } from '../lib';
 
 describe("My CDKTF Application", () => {
+  let globalStack: CdktfStack;
+
   it("successfully deploys", async () => {
     const outdir = path.join(__dirname, 'cdktf.test.out');
     const command = `npx ts-node ${path.join(__dirname, 'fixtures', 'app.ts')}`
 
     const { stack } = await testRunner(command, outdir);
+
+    globalStack = stack;
 
     await stack.deploy();
 
