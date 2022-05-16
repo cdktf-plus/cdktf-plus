@@ -17,6 +17,11 @@
   "author": "Sebastian Korfmann",
   "license": "MPL-2.0",
   "homepage": "https://github.com/cdktf-plus/cdktf-plus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdktf-plus/cdktf-plus.git",
+    "directory": "packages/@cdktf-plus/testing"
+  },
   "peerDependencies": {
     "cdktf": "^0.10.1",
     "constructs": "^10.0.71"
