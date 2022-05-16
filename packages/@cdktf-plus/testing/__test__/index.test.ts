@@ -2,6 +2,7 @@ import * as path from 'path';
 import { testRunner, CdktfStack } from '../lib';
 
 describe("My CDKTF Application", () => {
+  //@ts-ignore
   let globalStack: CdktfStack;
 
   it("successfully deploys", async () => {
