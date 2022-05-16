@@ -36,7 +36,16 @@
       "**/docker-registry-client/**",
       "execa",
       "**/execa",
-      "**/execa/**"
+      "**/execa/**",
+      "cdktf-cli",
+      "**/cdktf-cli",
+      "**/cdktf-cli/**",
+      "@cdktf/hcl2cdk",
+      "**/@cdktf/hcl2cdk",
+      "**/@cdktf/hcl2cdk/**",
+      "prettier",
+      "**/prettier",
+      "**/prettier/**"
     ]
   },
   "devDependencies": {
