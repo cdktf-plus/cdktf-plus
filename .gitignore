@@ -127,3 +127,5 @@ dist
 *.d.ts
 *.js
 .jsii
+terraform.*.tfstate
+cdktf.*.out

@@ -1,0 +1,50 @@
+{
+  "name": "@cdktf-plus/testing",
+  "version": "0.0.0",
+  "description": "Make integration testing easier for cdktf",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "package": "mkdir -p dist/js && npm pack --pack-destination dist/js",
+    "package:js": "jsii-pacmak --targets js",
+    "dist-clean": "rm -rf dist",
+    "test": "jest"
+  },
+  "author": "Sebastian Korfmann",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/cdktf-plus/cdktf-plus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdktf-plus/cdktf-plus.git",
+    "directory": "packages/@cdktf-plus/testing"
+  },
+  "peerDependencies": {
+    "cdktf": "^0.10.1",
+    "constructs": "^10.0.71"
+  },
+  "devDependencies": {
+    "@cdktf/provider-random": "^0.2.53",
+    "@swc/core": "^1.2.185",
+    "@swc/jest": "^0.2.21",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^16.3.1",
+    "cdktf": "0.10.1",
+    "constructs": "10.0.71",
+    "jest": "^28.1.0",
+    "jsii": "^1.54.0",
+    "jsii-pacmak": "^1.54.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@npmcli/ci-detect": "^2.0.0",
+    "@skorfmann/terraform-cloud": "^1.12.0",
+    "cdktf-cli": "^0.10.4",
+    "node-abort-controller": "^3.0.1",
+    "stream-buffers": "^3.0.2"
+  }
+}
