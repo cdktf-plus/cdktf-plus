@@ -17,6 +17,6 @@ describe("My CDKTF Application", () => {
 
     console.log({ outputs: stack.outputs });
 
-    expect(stack.outputs!.pet.value.lenght).not.toEqual(0)
+    expect(stack.outputs!.pet.value.length).not.toEqual(0)
   }, 30_000)
 });
