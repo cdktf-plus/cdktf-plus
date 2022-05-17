@@ -1,9 +1,9 @@
 import * as path from 'path';
-import { testRunner, CdktfStack } from '../lib';
+import { testRunner, CdktfStackTestRunner } from '../lib';
 
 describe("My CDKTF Application", () => {
   //@ts-ignore
-  let globalStack: CdktfStack;
+  let globalStack: CdktfStackTestRunner;
 
   it("successfully deploys", async () => {
     const outdir = path.join(__dirname, 'cdktf.test.out');
