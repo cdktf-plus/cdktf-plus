@@ -313,10 +313,10 @@
     "@types/node-fetch" "^2.6.1"
     node-fetch "^2.6.7"
 
-"@cdktf/provider-aws@^7.0.8":
-  version "7.0.8"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-7.0.8.tgz#dc3d3308937510d95fee741f57d13f70c621a176"
-  integrity sha512-3pTdmi/fu+A/DmpIUF4/D8Y9ZHKzVoQNfOrVgV2eNH+CuFcrsocJqnua/bjZU6F6xgfaY3bC63djZPW/NkYKXQ==
+"@cdktf/provider-aws@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-8.0.0.tgz#2d665a7501d4cfb05a7de633ae46adb4b809c396"
+  integrity sha512-FDljVJBDeJMjtyxeeEUccwkrlqvpB354QtL3ifEGLozRKiskgpbqZ2vxhH30S0L20/+IR5LI5P1ohacKd9o1WA==
 
 "@cdktf/provider-external@^0.5.8":
   version "0.5.8"
@@ -2405,6 +2405,14 @@ cdktf@0.10.4:
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.10.4.tgz#df89c9257e27f9f29787bd06cad5fa74c0593a68"
   integrity sha512-jaNfN+DXGLGVsCWtAe9I6a+sYUPMqTf2e5oIvkk/j3qJBZTUKeuUcVFrjlvbLPsN3YkfNHwZQTK3mdJsIx3MdA==
+  dependencies:
+    archiver "5.3.0"
+    json-stable-stringify "^1.0.1"
+
+cdktf@0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.11.0.tgz#3c606ee87f12fd2592b94522113b367a94a83976"
+  integrity sha512-eDHR/+Py+AesMPw0YQzX7q75YpTC9ZZ6xc8FsMQgyq2pKNpFppBbg+kVNeS3P6hI+uJo5OrHlweMW9hcpje24w==
   dependencies:
     archiver "5.3.0"
     json-stable-stringify "^1.0.1"
