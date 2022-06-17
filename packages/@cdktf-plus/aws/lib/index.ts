@@ -3,4 +3,4 @@ export * from './aws-event-bridge';
 export * from './aws-iam';
 export * from './aws-lambda-function';
 export * from './docker-function';
-export * from './nodejs-function'
+export * from './nodejs-lambda-function'

@@ -1,7 +1,7 @@
 {
   "name": "@cdktf-plus/core",
   "version": "0.0.0",
-  "description": "A collection of helpful L2 / L3 constrcuts for cdktf",
+  "description": "A collection of helpful L2 / L3 constructs for cdktf",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "publishConfig": {
@@ -41,12 +41,14 @@
     "@cdktf/provider-external": "^0.5.8",
     "@cdktf/provider-null": "^0.6.8",
     "docker-registry-client": "^3.3.0",
+    "esbuild-wasm": "^0.14.23",
     "execa": "^5.1.1",
     "hashdirectory": "^0.1.0"
   },
   "bundledDependencies": [
     "hashdirectory",
     "docker-registry-client",
+    "esbuild-wasm",
     "execa"
   ],
   "jsii": {
