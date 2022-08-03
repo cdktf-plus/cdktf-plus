@@ -22,15 +22,15 @@
     "directory": "packages/@cdktf-plus/aws"
   },
   "peerDependencies": {
-    "@cdktf/provider-aws": "^8.0.0",
-    "cdktf": "^0.11.0",
+    "@cdktf/provider-aws": "^9.0.0",
+    "cdktf": "^0.12.0",
     "constructs": "^10.0.71",
     "iam-floyd": "^0.326.0"
   },
   "devDependencies": {
-    "@cdktf/provider-aws": "8.0.0",
+    "@cdktf/provider-aws": "9.0.0",
     "@types/node": "^16.3.1",
-    "cdktf": "0.11.0",
+    "cdktf": "0.12.0",
     "constructs": "10.0.71",
     "iam-floyd": "0.326.0",
     "jsii": "^1.54.0",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@cdktf-plus/core": "0.0.0",
-    "@cdktf/provider-aws": "^8.0.0",
+    "@cdktf/provider-aws": "^9.0.0",
     "esbuild-wasm": "^0.14.23"
   },
   "bundledDependencies": [
