@@ -27,12 +27,12 @@
     "constructs": "^10.0.71"
   },
   "devDependencies": {
-    "@cdktf/provider-random": "^0.2.53",
+    "@cdktf/provider-random": "^2.0.8",
     "@swc/core": "^1.2.185",
     "@swc/jest": "^0.2.21",
     "@types/jest": "^27.5.1",
     "@types/node": "^16.3.1",
-    "cdktf": "0.10.1",
+    "cdktf": "0.12.0",
     "constructs": "10.0.71",
     "jest": "^28.1.0",
     "jsii": "^1.54.0",
